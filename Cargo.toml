@@ -1,0 +1,9 @@
+[package]
+name = "discovery"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+futures = {version = "0.3.32",features = ["default"]}
+tokio = {version = "1.52.3", features = ["full"]}
+hyper = {version = "1.9.0", features = ["full"]}
