@@ -1,6 +1,6 @@
-use crate::discovery::transport::{InvalidSessionError, Transport, TransportSession};
-use crate::discovery::Result;
-use crate::discovery::{settings, ImplFor};
+use crate::core::transport::{InvalidSessionError, Transport, TransportSession};
+use crate::core::Result;
+use crate::core::{settings, ImplFor};
 
 use std::error::Error;
 
@@ -11,12 +11,12 @@ use tokio::net::{TcpListener, TcpStream};
 
 pub struct TcpTransportPlugin;
 pub struct TcpTransport {
-    pub(super) listener: TcpListener,
+    pub(crate) listener: TcpListener,
 }
 
 pub struct TcpSession {
-    pub(super) addr: std::net::SocketAddr,
-    pub(super) stream: TcpStream,
+    pub(crate) addr: std::net::SocketAddr,
+    pub(crate) stream: TcpStream,
 }
 
 impl TransportSession for TcpSession {

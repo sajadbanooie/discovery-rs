@@ -1,5 +1,5 @@
-use crate::discovery::message::Message;
-use crate::discovery::ImplFor;
+use crate::core::message::Message;
+use crate::core::ImplFor;
 use std::error::Error;
 
 type Result<T> = std::result::Result<T, Box<dyn Error>>;

@@ -1,7 +1,7 @@
 use std::error::Error;
-use crate::discovery::data_model::{IDHash, INetAddr};
-use crate::discovery::db::{DBRecord, Database};
-use crate::discovery::ImplFor;
+use crate::core::data_model::{IDHash, INetAddr};
+use crate::core::db::{DBRecord, Database};
+use crate::core::ImplFor;
 
 type TransportSession = [u8];
 

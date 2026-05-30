@@ -1,1 +1,3 @@
-pub mod discovery;
+pub mod core;
+pub mod methods;
+pub mod transport;

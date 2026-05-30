@@ -1,8 +1,8 @@
-use crate::discovery::data_model::{IDHash, INetAddr, KeyType, MSGSignature, PrivateKey, PubKey};
-use crate::discovery::settings::Settings;
+use crate::core::data_model::{IDHash, INetAddr, KeyType, MSGSignature, PrivateKey, PubKey};
+use crate::core::settings::Settings;
 use std::error::Error;
-use crate::discovery::crypto::Crypto;
-use crate::discovery::ImplFor;
+use crate::core::crypto::Crypto;
+use crate::core::ImplFor;
 
 type Result<T> = std::result::Result<T, Box<dyn Error>>;
 

@@ -1,6 +1,6 @@
 use std::error::Error;
-use crate::discovery::data_model::{KeyType, MSGSignature, PrivateKey, PubKey};
-use crate::discovery::ImplFor;
+use crate::core::data_model::{KeyType, MSGSignature, PrivateKey, PubKey};
+use crate::core::ImplFor;
 
 type Result<T> = std::result::Result<T, Box<dyn Error>>;
 pub trait Crypto {

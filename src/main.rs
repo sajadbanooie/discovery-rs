@@ -1,6 +1,7 @@
-use discovery::discovery::ImplFor;
-use discovery::discovery::transport::tcp::*;
-use discovery::discovery::transport::*;
+use discovery::core::ImplFor;
+use discovery::transport::tcp::*;
+use discovery::core::transport::{Transport, TransportSession};
+use discovery::transport::*;
 
 use std::collections::HashMap;
 use std::error::Error;

@@ -1,25 +1,15 @@
 use std::error::Error;
 use std::fmt::{Display, Formatter};
-use crate::discovery::message::MsgField;
+use crate::core::message::MsgField;
 
 mod invalid_method;
 mod query_method;
 mod auth_method;
 
 
-#[derive(Debug)]
-struct InvalidMethodError;
-
-impl Error for InvalidMethodError {
-
-}
-
-impl Display for InvalidMethodError {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(f, "invalid method!")
-    }
-}
-
+pub use invalid_method::InvalidMethodHandler;
+pub use query_method::QueryMethodHandler;
+pub use auth_method::AuthMethodHandler;
 
 #[derive(Debug)]
 struct FieldNotPresentError<'a>{

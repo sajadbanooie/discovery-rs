@@ -1,12 +1,14 @@
-use crate::discovery::data_model::NodeProfile;
-use crate::discovery::db::DBRecord;
-use crate::discovery::message::{Message, MsgField};
-use crate::discovery::methods::FieldNotPresentError;
-use crate::discovery::session::Session;
-use crate::discovery::{MethodContext, MethodHandler, SubSystems, message_types};
+use crate::core::data_model::NodeProfile;
+use crate::core::message::{Message, MessageType, MsgField};
+use crate::core::session::Session;
+use crate::core::methods::{MethodContext, MethodHandler};
+use crate::core::{SubSystems, message_types};
 use std::error::Error;
+use std::fmt::{Display, Formatter};
+use crate::core::db::DBRecord;
+use crate::methods::FieldNotPresentError;
 
-struct AuthMethodHandler;
+pub struct AuthMethodHandler;
 
 impl<'a> MethodHandler<'a> for AuthMethodHandler {
     async fn handle(

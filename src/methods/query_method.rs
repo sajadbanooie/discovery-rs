@@ -1,13 +1,14 @@
-use crate::discovery::data_model::NodeProfile;
-use crate::discovery::db::DBRecord;
-use crate::discovery::message::{Message, MessageType, MsgField};
-use crate::discovery::message_types;
-use crate::discovery::methods::{FieldNotPresentError, InvalidFieldType};
-use crate::discovery::session::Session;
-use crate::discovery::{MethodContext, MethodHandler, SubSystems};
+use crate::core::data_model::NodeProfile;
+use crate::core::message::{Message, MessageType, MsgField};
+use crate::core::session::Session;
+use crate::core::methods::{MethodContext, MethodHandler};
+use crate::core::{SubSystems, message_types};
 use std::error::Error;
+use std::fmt::{Display, Formatter};
+use crate::core::db::DBRecord;
+use crate::methods::FieldNotPresentError;
 
-struct QueryMethodHandler;
+pub struct QueryMethodHandler;
 impl<'a> MethodHandler<'a> for QueryMethodHandler {
     async fn handle(
         &mut self,

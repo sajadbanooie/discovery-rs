@@ -1,4 +1,4 @@
-use crate::discovery::message::MessageType;
+use crate::core::message::MessageType;
 
 pub const ERR: MessageType = MessageType{code: 255,repr: "ERR"};
 pub const ANS: MessageType = MessageType{code: 0,repr: "ANS"};
